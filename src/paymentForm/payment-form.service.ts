@@ -27,6 +27,9 @@ export class PaymentFormService {
     const hash = crypto.createHmac('sha256', key).update(message).digest('base64');
     data.signature = hash;
 
+    console.log('payment data: ', data);
+    
+
     return data
   }
   
@@ -36,7 +39,9 @@ export class PaymentFormService {
       amount: '3800',
       ctxMode: 'TEST',
       currency: '604',
-      pageAction: 'PAYMENT',
+      custEmail: 'alopez@gmail.com',
+      identifier: 'aceb26d84ef246ba8c83a8cd95c54ab1',
+      pageAction: 'PAYMENT', // PAYMENT; REGISTER
       paymentConfig: 'SINGLE',
       siteId: '60203431',
       transDate: this.getDate(),
@@ -54,3 +59,6 @@ export class PaymentFormService {
     return String(Math.round(randomNum));
   }
 }
+
+// TOKEN
+// aceb26d84ef246ba8c83a8cd95c54ab1

@@ -16,6 +16,8 @@ export class EmbeddedFormService {
       amount: 100,
       currency: 'PEN',
       orderId: 'myOrderIdABC',
+      // formAction : "SILENT",
+      // paymentMethodToken:"fab9213065974b3ab03df26dfad92979",
       customer: {
         email: 'sample@example.com',
       },
@@ -53,8 +55,8 @@ export class EmbeddedFormService {
   }
 
   private encoded(): string {
-    let user = '89289758';
-    let pass = 'testpassword_7vAtvN49E8Ad6e6ihMqIOvOHC6QV5YKmIXgxisMm0V7Eq';
+    let user = '60203431';
+    let pass = 'testpassword_4GVdJk52pmo1sleHRfT0f2wVnjUJJi9lw9EmtrAy6lkLB';
     let text = user + ':' + pass;
     return Buffer.from(text).toString('base64')
   }

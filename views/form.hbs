@@ -10,24 +10,52 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-  <title>Hello, world! {{ title }}</title>
+  <title>Formulario de Pago - Test</title>
 </head>
 
 <body>
   <h1>Prueba Formulario de Pago</h1>
 
   <form method="POST" action="https://secure.micuentaweb.pe/vads-payment/">
-    <input type="hidden" name="vads_action_mode" value={{ actionMode }} />
-    <input type="hidden" name="vads_amount" value={{ amount }} />
-    <input type="hidden" name="vads_ctx_mode" value={{ ctxMode }} />
-    <input type="hidden" name="vads_currency" value={{ currency }} />
-    <input type="hidden" name="vads_page_action" value={{ pageAction }} />
-    <input type="hidden" name="vads_payment_config" value={{ paymentConfig }} />
-    <input type="hidden" name="vads_site_id" value={{ siteId }} />
-    <input type="hidden" name="vads_trans_date" value={{ transDate }} />
-    <input type="hidden" name="vads_trans_id" value={{ transId }} />
-    <input type="hidden" name="vads_version" value={{ version }} />
-    <input type="hidden" name="signature" value={{ signature }} />
+    <label for="">vads_action_mode</label>
+    <input name="vads_action_mode" value={{ actionMode }} />
+    <br>
+    <label for="">vads_amount</label>
+    <input name="vads_amount" value={{ amount }} />
+    <br>
+    <label for="">vads_ctx_mode</label>
+    <input name="vads_ctx_mode" value={{ ctxMode }} />
+    <br>
+    <label for="">vads_currency</label>
+    <input name="vads_currency" value={{ currency }} />
+    <br>
+    <label for="">vads_cust_email</label>
+    <input name="vads_cust_email" value={{ custEmail }} />
+    <br>
+    <label for="">vads_identifier</label>
+    <input name="vads_identifier" value={{ identifier }} />
+    <br>
+    <label for="">vads_page_action</label>
+    <input name="vads_page_action" value={{ pageAction }} />
+    <br>
+    <label for="">vads_payment_config</label>
+    <input name="vads_payment_config" value={{ paymentConfig }} />
+    <br>
+    <label for="">vads_site_id</label>
+    <input name="vads_site_id" value={{ siteId }} />
+    <br>
+    <label for="">vads_trans_date</label>
+    <input name="vads_trans_date" value={{ transDate }} />
+    <br>
+    <label for="">vads_trans_id</label>
+    <input name="vads_trans_id" value={{ transId }} />
+    <br>
+    <label for="">vads_version</label>
+    <input name="vads_version" value={{ version }} />
+    <br>
+    <label for="">signature</label>
+    <input name="signature" value={{ signature }} />
+    <br>
     <input type="submit" name="pagar" value="Pagar" />
   </form <!--
     Optional JavaScript -->
