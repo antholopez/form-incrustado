@@ -40,8 +40,8 @@ export class PaymentFormService {
       ctxMode: 'TEST',
       currency: '604',
       custEmail: 'alopez@gmail.com',
-      identifier: 'aceb26d84ef246ba8c83a8cd95c54ab1',
-      pageAction: 'PAYMENT', // PAYMENT; REGISTER
+      // identifier: 'aceb26d84ef246ba8c83a8cd95c54ab1',
+      pageAction: 'REGISTER', // PAYMENT; REGISTER
       paymentConfig: 'SINGLE',
       siteId: '60203431',
       transDate: this.getDate(),
