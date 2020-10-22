@@ -22,6 +22,13 @@ export class EmbeddedFormController {
     // return data
   }
 
+  @Post('payment-response-url')
+  paymentResponseOrderURL(@Req() request: Request) {
+    const { body } = request
+    console.log('Viendo el request que llega: ', body)
+    // return data
+  }
+
   @Post('rest-form-inscrustado')
   async restFormIncrustado() {
     return await this.embeddedFormService.restFormIncrustado();

@@ -5,26 +5,31 @@ import axios from 'axios';
 export class EmbeddedFormService {
 
   async getTestForm(): Promise<any> {
-    const token = this.encoded();
-
-    const url =
-      'https://api.micuentaweb.pe/api-payment/V4/Charge/CreatePayment';
-    const headers = {
-      Authorization: `Basic ${token}`,
-    };
-    let paymentData = {
-      amount: 100,
-      currency: 'PEN',
-      orderId: 'myOrderIdABC',
-      // formAction : "SILENT",
-      // paymentMethodToken:"fab9213065974b3ab03df26dfad92979",
-      customer: {
-        email: 'sample@example.com',
-      },
-    };
-    const { data } = await axios.post(url, paymentData, { headers });
-
-    return data;
+    try {
+      const token = this.encoded();
+  
+      const url =
+        'https://api.micuentaweb.pe/api-payment/V4/Charge/CreatePayment';
+      const headers = {
+        Authorization: `Basic ${token}`,
+      };
+      let paymentData = {
+        amount: 100,
+        currency: 'PEN',
+        orderId: 'myOrderIdABC',
+        // formAction : "SILENT",
+        // paymentMethodToken:"fab9213065974b3ab03df26dfad92979",
+        customer: {
+          email: 'sample@example.com',
+        },
+      };
+      const { data } = await axios.post(url, paymentData, { headers });
+  
+      return data;
+      
+    } catch (error) {
+      console.log('Viendo el error: ', error)
+    }
   }
 
   async restFormIncrustado() {
