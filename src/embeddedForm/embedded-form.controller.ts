@@ -25,7 +25,9 @@ export class EmbeddedFormController {
   @Post('payment-response-url')
   paymentResponseOrderURL(@Req() request: Request) {
     const { body } = request
-    console.log('Viendo el request que llega: ', body)
+    console.log('***********************************************************')
+    console.log('View Request Payment: ', body)
+    console.log('***********************************************************')
     // return data
   }
 
