@@ -22,6 +22,7 @@ export class PaymentFormService {
       }
     }
     message += key;
+    console.log(message)
     
     // generate signature
     const hash = crypto.createHmac('sha256', key).update(message).digest('base64');
@@ -52,6 +53,7 @@ export class PaymentFormService {
 
   private getDate() {
     return moment().add(5, 'hours').format('YYYYMMDDHHmmss');
+    // return moment().format('YYYYMMDDHHmmss');
   }
 
   private getRandomTransactionId(min: number, max: number) {
