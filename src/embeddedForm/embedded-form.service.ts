@@ -6,15 +6,17 @@ export class EmbeddedFormService {
 
   async getTestForm(): Promise<any> {
     try {
+      
       const token = this.encoded();
-  
+      console.log('Viendo el token que se ha creado: ', token);
+      
       const url =
         'https://api.micuentaweb.pe/api-payment/V4/Charge/CreatePayment';
       const headers = {
         Authorization: `Basic ${token}`,
       };
       let paymentData = {
-        amount: 100,
+        amount: 1000,
         currency: 'PEN',
         orderId: 'myOrderIdABC',
         // formAction : "SILENT",
