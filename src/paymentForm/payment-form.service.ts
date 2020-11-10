@@ -37,11 +37,11 @@ export class PaymentFormService {
   private requestPayment(): any {
     return {
       actionMode: 'INTERACTIVE',
-      amount: '3800',
+      amount: '000',
       ctxMode: 'TEST',
       currency: '604',
       custEmail: 'alopez@gmail.com',
-      // identifier: 'aceb26d84ef246ba8c83a8cd95c54ab1',
+      // identifier: '294ce17892ae46b09db4e219ab190e89',
       pageAction: 'PAYMENT', // PAYMENT; REGISTER
       paymentConfig: 'SINGLE',
       siteId: '60203431',

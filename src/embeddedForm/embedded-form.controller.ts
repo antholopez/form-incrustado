@@ -10,8 +10,9 @@ export class EmbeddedFormController {
   @Render('index')
   async getHello(): Promise<object> {
     const res = await this.embeddedFormService.getTestForm();
-
+ 
     let formToken = res.answer.formToken;
+    console.log(formToken);
     return { message: 'Prueba - formulario inscrustado', formToken };
   }
 
@@ -20,6 +21,11 @@ export class EmbeddedFormController {
     const { body } = request
     return body['kr-answer']
     // return data
+  }
+
+  @Post('generate-form-token')
+  async generateFormToken() {
+    return await this.embeddedFormService.getTestForm();
   }
 
   @Post('payment-response-url')
@@ -31,7 +37,7 @@ export class EmbeddedFormController {
     // return data
   }
 
-  @Post('rest-form-inscrustado')
+  @Post('generate-transaction')
   async restFormIncrustado() {
     return await this.embeddedFormService.restFormIncrustado();
   }

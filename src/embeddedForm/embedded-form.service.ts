@@ -8,7 +8,7 @@ export class EmbeddedFormService {
     try {
       
       const token = this.encoded();
-      console.log('Viendo el token que se ha creado: ', token);
+      // console.log('Viendo el token que se ha creado: ', token);
       
       const url =
         'https://api.micuentaweb.pe/api-payment/V4/Charge/CreatePayment';
@@ -16,18 +16,19 @@ export class EmbeddedFormService {
         Authorization: `Basic ${token}`,
       };
       let paymentData = {
-        amount: 1000,
+        amount: 9400,
         currency: 'PEN',
-        orderId: 'myOrderIdABC',
-        // formAction : "SILENT",
-        // paymentMethodToken:"fab9213065974b3ab03df26dfad92979",
+        orderId: 'myOrderABC780',
         customer: {
           email: 'sample@example.com',
         },
       };
+
       const { data } = await axios.post(url, paymentData, { headers });
   
       return data;
+
+      // izipay-test.herokuapp.com/embedded-form/payment-response-url
       
     } catch (error) {
       console.log('Viendo el error: ', error)
