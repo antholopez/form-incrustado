@@ -37,7 +37,7 @@ export class PaymentFormService {
   private requestPayment(): any {
     return {
       actionMode: 'INTERACTIVE',
-      amount: '000',
+      amount: '2000',
       ctxMode: 'TEST',
       currency: '604',
       custEmail: 'alopez@gmail.com',
