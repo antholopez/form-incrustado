@@ -52,8 +52,8 @@ export class PaymentFormService {
   }
 
   private getDate() {
+    if (process.env.NODE_ENV === 'production') return moment().format('YYYYMMDDHHmmss');
     return moment().add(5, 'hours').format('YYYYMMDDHHmmss');
-    // return moment().format('YYYYMMDDHHmmss');
   }
 
   private getRandomTransactionId(min: number, max: number) {
